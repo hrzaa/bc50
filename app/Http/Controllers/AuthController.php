@@ -55,7 +55,7 @@ class AuthController extends Controller
 
     public function login()
     {
-        dd(request()->all());
+        // dd(request()->all());
         try {
             if (!$token = JWTAuth::attempt([
                 'email' => request()->email, 

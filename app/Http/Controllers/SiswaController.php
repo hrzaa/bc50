@@ -81,7 +81,7 @@ class SiswaController extends Controller
     }
 
 
-    public function update(Request $request, Siswa $siswa)
+    public function update(Request $request, $id)
     {
         //set validation
         $validator = Validator::make($request->all(), [
@@ -98,7 +98,7 @@ class SiswaController extends Controller
         }
 
         //find siswa by ID
-        $post = Siswa::findOrFail($siswa->id);
+        $post = Siswa::findOrFail($id);
 
         if ($post) {
 
